@@ -241,14 +241,7 @@ steps:
     checksum_flatten: true
     files:
     - "dist/artifacts/*"
-  when:
-    instance:
-    - drone-publish.rancher.io
-    ref:
-    - refs/head/master
-    - refs/tags/*
-    event:
-    - tag
+    
 - name: docker-publish-agent
   image: rancher/drone-images:docker-s390x
   volumes:
